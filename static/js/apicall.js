@@ -300,7 +300,7 @@ function chilerUpdateCall() {
       url: `http://${ip}:${port}${CHILER_CWST}`,
       method: "GET",
       dataType: "json",
-      data: { runDate: `201101110000` },
+      data: { runDate: `201007130630` },
     })
       .done((data) => {
         // 데이터 정리
@@ -418,7 +418,7 @@ function chilerFirstUpdateCall() {
     url: `http://${ip}:${port}${CHILER_CWST}`,
     method: "GET",
     dataType: "json",
-    data: { runDate: `201101110000` },
+    data: { runDate: `201007130630` },
   })
     .done((data) => {
       // 데이터 정리
@@ -489,7 +489,7 @@ function boilerUpdateCall() {
       url: `http://${ip}:${port}${DASH_BOILER}`,
       method: "GET",
       dataType: "json",
-      data: { runDate: `201101110000 ` },
+      data: { runDate: `201001120700 ` },
     })
       .done((data) => {
         // 데이터 정리
@@ -619,7 +619,7 @@ function boilerFirstUpdateCall() {
     url: `http://${ip}:${port}${DASH_BOILER}`,
     method: "GET",
     dataType: "json",
-    data: { runDate: `201101110000 ` },
+    data: { runDate: `201001120700 ` },
   })
     .done((data) => {
       console.log(data);

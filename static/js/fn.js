@@ -261,7 +261,7 @@ function chilerUpdate(a) {
     Number(a.chiler01_cwst).toFixed(1) + " ℃"
   );
   $(".chiler-01 .svg_pow_box .temp_value").html(
-    Number(a.chiler01_pow).toFixed(1) + " ℃"
+    Number(a.chiler01_pow).toFixed(1) + "Kw"
   );
 
   // chiler-02
@@ -277,7 +277,7 @@ function chilerUpdate(a) {
     Number(a.chiler02_cwst).toFixed(1) + " ℃"
   );
   $(".chiler-02 .svg_pow_box .temp_value").html(
-    Number(a.chiler02_pow).toFixed(1) + " ℃"
+    Number(a.chiler02_pow).toFixed(1) + "Kw"
   );
 }
 
@@ -324,7 +324,7 @@ function boilerUpdate(a) {
     "stroke-dasharray",
     (maxValue * Number(a.boiler03_pow)) / 100 + ", 1400"
   );
-  $(".boiler-02 .svg_gas").attr(
+  $(".boiler-03 .svg_gas").attr(
     "stroke-dasharray",
     (maxValue * Number(a.boiler03_gas)) / 100 + ", 1400"
   );
@@ -343,7 +343,7 @@ function boilerUpdate(a) {
   );
   $(".boiler-04 .svg_gas").attr(
     "stroke-dasharray",
-    (maxValue * Number(a.boiler04_gas)) / 100 + ", 1400"
+    (maxValue * Number(a.boiler04_gas)) / 130 + ", 1400"
   );
 
   $(".boiler-04 .svg_pow_box .temp_value").html(
@@ -1504,7 +1504,7 @@ function chilerChart(a) {
       <div>
         <input type="checkbox" id="set_btn" class="ahu_label_btn" data-label="set" checked />
         <label for="set_btn" class="label_box set"></label>
-        <label for="set_btn" class="label set">칠러온도</label>
+        <label for="set_btn" class="label set">칠러전력</label>
       </div>
     </div>`
   );
@@ -1517,7 +1517,7 @@ function chilerTable(a) {
   a.forEach((e, i) => {
     table.innerHTML += `<tr>
       <td>${e.runDateTime}</td>
-      <td>${Number(e.ch_pow).toFixed(1)} ℃</td>
+      <td>${Number(e.ch_pow).toFixed(1)} Kw</td>
       </tr>`;
   });
 }
@@ -1783,7 +1783,7 @@ function boilerTable(a) {
   a.forEach((e, i) => {
     table.innerHTML += `<tr>
       <td>${e.runDateTime}</td>
-      <td>${Number(e.bo_pow).toFixed(1)} ℃</td>
+      <td>${Number(e.bo_pow).toFixed(1)} Kw</td>
       </tr>`;
   });
 }
@@ -2062,7 +2062,7 @@ function boilerGasTable(a) {
   a.forEach((e, i) => {
     table.innerHTML += `<tr>
       <td>${e.runDateTime}</td>
-      <td>${Number(e.bo_gas).toFixed(1)} ℃</td>
+      <td>${Number(e.bo_gas).toFixed(1)} </td>
       </tr>`;
   });
 }
