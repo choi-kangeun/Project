@@ -1,6 +1,8 @@
 // IP, PORT Address
-const ip = "43.200.196.117";
-const port = "8000";
+// FasiAPI를 먼저 로컬에서 띄워야함 밑에 주소는 FastAPI 로컬 주소 및 포트번호임
+// AWS EC2에 올릴 경우 EC2 IP로 변경하면 됨
+const ip = "127.0.0.1";
+const port = "8888";
 
 // API Address
 // 대시보드
